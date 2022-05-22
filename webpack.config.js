@@ -1,4 +1,4 @@
 module.exports = {
-  entry: ["app.js"],
+  entry: ["./app.js"],
   target: "node"
 } 
