@@ -1,14 +1,7 @@
 // Package Imports
-import express from 'express';
-import dotenv from 'dotenv';
-dotenv.config();
+const express = require('express')
 
 
-import { fileURLToPath } from 'url';
-import path, { dirname } from 'path';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 const SERVER_PORT = process.env.PORT || 5000;
 
 // Routes Imports
@@ -23,14 +16,6 @@ app.use(express.json()); //application/json
 // Body Parser to handle form data (text Only)
 app.use(express.urlencoded({ extended: false }));
 
-
-// Setting up Static Folders
-app.use(express.static(path.join(__dirname, 'public')));
-/**
-  The reason for doing this is because express assumes that the files in images folder are served as they were
-  in the root folder. In our case we are looking in http://localhost:5000/images instead of http://localhost:5000/.
-*/
-app.use('/images', express.static(path.join(__dirname, 'images')));
 
 // Handling CORS Error
 app.use((req, res, next) => {
