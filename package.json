@@ -12,11 +12,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "webpack-cli": "^4.9.2"
   },
   "dependencies": {
     "dotenv": "^16.0.1",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "webpack": "^5.72.1"
   },
   "type": "module"
 }
