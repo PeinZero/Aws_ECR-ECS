@@ -1,11 +1,7 @@
 // Package Imports
 const express = require('express')
 
-
 const SERVER_PORT = process.env.PORT || 5000;
-
-// Routes Imports
-
 
 // Constants
 const app = express();
