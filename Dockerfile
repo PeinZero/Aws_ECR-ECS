@@ -1,4 +1,4 @@
-FROM node:14.17.1
+FROM node:13.8.0-alpine
 
 COPY dist dist/
 COPY package.json .
