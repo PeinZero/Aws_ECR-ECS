@@ -3,7 +3,7 @@ version: 0.2
 phase:
   install:
     runtime-versions:
-      docker: 
+      docker: 20
       nodejs: 14
   pre_build:
     commands:
