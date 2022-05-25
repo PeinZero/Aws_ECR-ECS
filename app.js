@@ -28,10 +28,6 @@ app.use((req, res, next) => {
 // <------------ Incoming requests flow from top to bottom. ------------>
 //Routes
 
-app.use('/', (req, res, next) => {
-  res.status(200).json({app: "working"})
-})
-
 app.use('/posts',  (req, res, next) => {
   try {
     res.status(201).json({
@@ -300,6 +296,9 @@ app.use('/posts',  (req, res, next) => {
   }
 });
 
+app.use('/', (req, res, next) => {
+  res.status(200).json({app: "working"})
+})
 // response for any unknown api request
 app.use((error, req, res, next) => {
   console.log(error);
