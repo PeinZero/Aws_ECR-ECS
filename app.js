@@ -297,8 +297,9 @@ app.use('/posts',  (req, res, next) => {
 });
 
 app.use('/', (req, res, next) => {
-  res.status(200).json({app: "working"})
+  res.status(200).json({app: "not working"})
 })
+
 // response for any unknown api request
 app.use((error, req, res, next) => {
   console.log(error);
